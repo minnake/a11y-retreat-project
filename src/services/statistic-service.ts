@@ -1,6 +1,7 @@
 import { StatisticsData } from "./../types"
 import axios from "axios"
 import { GetStatisticsResponse } from "../types"
+import apiConfig from "./api-config.json"
 
 const mapValues = (data: GetStatisticsResponse): StatisticsData => {
   const { category } = data.dimension.Tiedot
@@ -15,25 +16,22 @@ const mapValues = (data: GetStatisticsResponse): StatisticsData => {
   return { label, values }
 }
 
-const getStatistics = async (postalCode: string) /* : Promise<GetStatisticsResponse> */ => {
+const getStatistics = async (postalCode: string, lang: "en" | "fi"): Promise<StatisticsData> => {
   try {
-    const data = await axios.post<GetStatisticsResponse>(
-      "https://pxnet2.stat.fi:443/PXWeb/api/v1/en/Postinumeroalueittainen_avoin_tieto/2021/paavo_pxt_12ey.px",
-      {
-        query: [
-          {
-            code: "Postinumeroalue",
-            selection: {
-              filter: "item",
-              values: [postalCode],
-            },
+    const data = await axios.post<GetStatisticsResponse>(apiConfig[lang].url, {
+      query: [
+        {
+          code: "Postinumeroalue",
+          selection: {
+            filter: "item",
+            values: [postalCode],
           },
-        ],
-        response: {
-          format: "json-stat2",
         },
+      ],
+      response: {
+        format: "json-stat2",
       },
-    )
+    })
 
     return mapValues(data.data)
   } catch (e) {
