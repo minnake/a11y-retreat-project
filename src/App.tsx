@@ -1,10 +1,11 @@
 import React, { useState, MouseEvent } from "react"
 import statisticsService from "./services/statistic-service"
-import { StatisticsData } from "./types"
+import translations from "./translations"
+import { Language, StatisticsData } from "./types"
 
 const App = () => {
   const [data, setData] = useState<StatisticsData>({ values: [], label: "" })
-  const [lang, setLang] = useState<"en" | "fi">("en")
+  const [lang, setLang] = useState<Language>("en")
   const getStatistics = async () => {
     const info = await statisticsService.getStatistics("00100", lang)
     setData(info)
@@ -16,7 +17,7 @@ const App = () => {
   return (
     <>
       <header>
-        <h1>Population structure by Postal code area and Information</h1>
+        <h1>{translations[lang].heading}</h1>
         <div className="row">
           <div className="button" id="en" onClick={handleLanguageToggle}>
             En
@@ -27,7 +28,7 @@ const App = () => {
         </div>
       </header>
       <main>
-        <button onClick={getStatistics}>Get Statistics</button>
+        <button onClick={getStatistics}>{translations[lang].getStatistics}</button>
         <table>
           <caption>{data.label}</caption>
           <tr>

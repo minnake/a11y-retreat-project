@@ -1,7 +1,7 @@
 import { StatisticsData } from "./../types"
 import axios from "axios"
-import { GetStatisticsResponse } from "../types"
-import apiConfig from "./api-config.json"
+import { GetStatisticsResponse, Language } from "../types"
+import apiConfig from "./api-config"
 
 const mapValues = (data: GetStatisticsResponse): StatisticsData => {
   const { category } = data.dimension.Tiedot
@@ -16,7 +16,7 @@ const mapValues = (data: GetStatisticsResponse): StatisticsData => {
   return { label, values }
 }
 
-const getStatistics = async (postalCode: string, lang: "en" | "fi"): Promise<StatisticsData> => {
+const getStatistics = async (postalCode: string, lang: Language): Promise<StatisticsData> => {
   try {
     const data = await axios.post<GetStatisticsResponse>(apiConfig[lang].url, {
       query: [

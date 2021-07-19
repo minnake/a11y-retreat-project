@@ -34,3 +34,14 @@ export interface StatisticsData {
   label: string
   values: DataItem[]
 }
+
+export interface TranslationKeys {
+  heading: string
+  getStatistics: string
+}
+
+export interface ApiConfigKeys {
+  url: string
+}
+
+export type Language = "en" | "fi"
