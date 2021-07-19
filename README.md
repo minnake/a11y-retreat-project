@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# A11y-Retreat Demo Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Note! This repo has some serious accessibility problems in purpose, as it is used as a demo and template for a lecture.
 
 ## Available Scripts
 
