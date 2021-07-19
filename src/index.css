@@ -17,6 +17,16 @@ body {
   color: var(--c-text-color);
 }
 
-.box {
+
+.button, button {
   background-color: var(--c-secondary-color);
+  border: 0.15rem solid var(--c-text-color);
+  padding: 0.25rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }

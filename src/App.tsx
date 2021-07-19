@@ -17,12 +17,14 @@ const App = () => {
     <>
       <header>
         <h1>Population structure by Postal code area and Information</h1>
-        <button id="en" onClick={handleLanguageToggle}>
-          En
-        </button>
-        <button id="fi" onClick={handleLanguageToggle}>
-          Fi
-        </button>
+        <div className="row">
+          <div className="button" id="en" onClick={handleLanguageToggle}>
+            En
+          </div>
+          <div className="button" id="fi" onClick={handleLanguageToggle}>
+            Fi
+          </div>
+        </div>
       </header>
       <main>
         <button onClick={getStatistics}>Get Statistics</button>
