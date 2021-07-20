@@ -7,7 +7,8 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 20rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -15,6 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--c-background-color);
   color: var(--c-text-color);
+  padding-bottom: 1rem;
 }
 
 
@@ -29,4 +31,14 @@ body {
 .row {
   display: flex;
   flex-direction: row;
+}
+
+.center {
+  justify-content: center;
+}
+
+.error {
+  background-color: var(--c-secondary-color);
+  padding: 1rem;
+  margin: 0.5rem 0;
 }

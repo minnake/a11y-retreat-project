@@ -36,7 +36,7 @@ const getStatistics = async (postalCode: string, lang: Language): Promise<Statis
     return mapValues(data.data)
   } catch (e) {
     console.log(e)
-    return { values: [], label: "" }
+    return { values: [], label: "", error: e.message }
   }
 }
 

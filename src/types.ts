@@ -33,11 +33,14 @@ export interface DataItem {
 export interface StatisticsData {
   label: string
   values: DataItem[]
+  error?: string
 }
 
 export interface TranslationKeys {
   heading: string
   getStatistics: string
+  postalCode: string
+  postalCodeError: string
 }
 
 export interface ApiConfigKeys {
