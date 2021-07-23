@@ -1,46 +1,37 @@
 # A11y-Retreat Demo Project
 
-Note! This repo has some serious accessibility problems in purpose, as it is used as a demo and template for a lecture.
+Note! Code of this repo has some serious accessibility problems in purpose, as it is used as a demo and template for a lecture. So don't look for code examples from this repository 😁
 
-## Available Scripts
+This project has been bootstrapped with Create React App, and is not beautiful. Some things have been on purpose, and some are just left there because I didn't want to use too much time when creating this project. So when you're forking this project, feel free to change whatever you want.
 
-In the project directory, you can run:
+## Prerequisites
 
-### `yarn start`
+Make sure you have the following packages installed:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Node v. 14.x
+- Yarn v. 1.22.x
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Things Up And Running
 
-### `yarn test`
+First, fork the repository. You can find the fork button from the right upper corner of the repository page. You can find more detailed instructions from [Github's forking guide](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After completing the steps, you should have the cloned repo on your computer. :tada:
 
-### `yarn build`
+Move into the cloned repository with
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+cd a11y-retreat-project
+```
+(or if you renamed the repo, use that name)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+and install dependencies with
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+yarn
+```
 
-### `yarn eject`
+After that, everything should be fine, and you can start the project with
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+yarn start
+```
