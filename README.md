@@ -1,6 +1,6 @@
 # A11y-Retreat Demo Project
 
-Note! Code of this repo has some serious accessibility problems in purpose, as it is used as a demo and template for a lecture. So don't look for code examples from this repository 😁
+Note! Code of this repo has some serious accessibility problems on purpose, as it is used as a demo and template for a lecture. So don't look for code examples from this repository 😁
 
 This project has been bootstrapped with Create React App, and is not beautiful. Some things have been on purpose, and some are just left there because I didn't want to use too much time when creating this project. So when you're forking this project, feel free to change whatever you want.
 
